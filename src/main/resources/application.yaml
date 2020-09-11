@@ -1,0 +1,11 @@
+server:
+  port: 8890
+
+spring:
+  application:
+    name: Spring_Boot_Demo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/bnz_edu?useUnicode=true&characterEncoding=gbk&autoReconnect=true&failOverReadOnly=false
+    username: root
+    password: root

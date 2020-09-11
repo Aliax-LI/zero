@@ -5,7 +5,10 @@ import com.example.zero.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 import java.util.List;
+import java.util.Objects;
 import java.util.UUID;
 
 /**
@@ -26,8 +29,9 @@ public class PersonController {
     }
 
     @PostMapping
-    public int addPerson(@RequestBody Person person) {
-        return personService.addPerson(person);
+    public String addPerson(@RequestBody @Valid @NotNull Person person) {
+        int addPerson = personService.addPerson(person);
+        return addPerson == 1 ? "请求成功" : "添加失败";
     }
 
     @GetMapping
@@ -47,7 +51,7 @@ public class PersonController {
     }
 
     @PutMapping(path = "{id}")
-    public int updatePeopleById(@PathVariable("id") UUID id, @RequestBody Person person) {
+    public int updatePeopleById(@PathVariable("id") UUID id, @Valid @NotNull @RequestBody Person person) {
         return personService.updatePeopleById(id, person);
     }
 }
