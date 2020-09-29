@@ -14,7 +14,7 @@ public class Array {
     }
 
     public void insert(int item) {
-        // 判断数组长度是否等于当前索引
+        // 判断数组长度是否等于当前容量
         if (items.length == count) {
             // 对原数组扩容2倍
             int[] newItems = new int[count * 2];
@@ -25,6 +25,7 @@ public class Array {
             // 将新数组赋值给原数组
             items = newItems;
         }
+        // 对数组进行添加元素操作
         items[count++] = item;
     }
 
@@ -40,10 +41,21 @@ public class Array {
         if (index < 0 || index >= count) {
             throw new IllegalArgumentException();
         }
+        // 对需要删除的后面所有元素向前移动一位
         for (int i = index; i < count; i++) {
             items[i] = items[i + 1];
         }
         count--;
+    }
+
+
+    public int indexOf(int item) {
+        for (int i = 0; i < count; i++) {
+            if (items[i] == item) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     public static void main(String[] args) {
