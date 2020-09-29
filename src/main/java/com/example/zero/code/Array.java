@@ -35,12 +35,24 @@ public class Array {
         }
     }
 
+    public void delete(int index) {
+        // 判断索引是否在该数组中
+        if (index < 0 || index >= count) {
+            throw new IllegalArgumentException();
+        }
+        for (int i = index; i < count; i++) {
+            items[i] = items[i + 1];
+        }
+        count--;
+    }
+
     public static void main(String[] args) {
         Array array = new Array(3);
         array.insert(10);
         array.insert(20);
         array.insert(30);
         array.insert(40);
+        array.delete(4);
         array.print();
     }
 }
