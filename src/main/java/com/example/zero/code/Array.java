@@ -2,6 +2,8 @@ package com.example.zero.code;
 
 import lombok.Setter;
 
+import java.util.LinkedList;
+
 
 @Setter
 public class Array {
@@ -66,5 +68,6 @@ public class Array {
         array.insert(40);
         array.delete(4);
         array.print();
+        String a = "111";
     }
 }
