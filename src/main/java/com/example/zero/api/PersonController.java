@@ -3,6 +3,7 @@ package com.example.zero.api;
 import com.example.zero.model.Person;
 import com.example.zero.service.PersonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
