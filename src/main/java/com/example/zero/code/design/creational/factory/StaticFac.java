@@ -1,4 +1,4 @@
-package com.example.zero.code.design.factory;
+package com.example.zero.code.design.creational.factory;
 
 
 /**

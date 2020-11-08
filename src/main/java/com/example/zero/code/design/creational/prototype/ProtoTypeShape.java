@@ -1,6 +1,5 @@
-package com.example.zero.code.design.prototype;
+package com.example.zero.code.design.creational.prototype;
 
-import org.springframework.util.ObjectUtils;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.example.zero.code.design.singleton;
+package com.example.zero.code.design.creational.singleton;
 
 
 /**

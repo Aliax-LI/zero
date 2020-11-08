@@ -1,4 +1,4 @@
-package com.example.zero.code.design.abstractfactory;
+package com.example.zero.code.design.creational.abstractfactory;
 
 /**
  * 抽象工厂模式
