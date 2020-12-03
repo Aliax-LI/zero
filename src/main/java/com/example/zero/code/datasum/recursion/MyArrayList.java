@@ -1,11 +1,10 @@
 package com.example.zero.code.datasum.recursion;
 
-import jdk.nashorn.internal.runtime.arrays.ArrayLikeIterator;
-
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.Objects;
-
+/**
+ * ArrayList类的实现
+ * @Author: Mr.Li
+ * @Date: 2020/12/3 9:34
+ */
 public class MyArrayList<AnyType> implements Iterable<AnyType> {
 
     private static final int DEFAULT_CAPACITY = 10;
@@ -87,6 +86,11 @@ public class MyArrayList<AnyType> implements Iterable<AnyType> {
         return new ArrayListIterator();
     }
 
+    /**
+     * 迭代器通过内部类实现
+     * @Author: Mr.Li
+     * @Date: 2020/12/3 9:36
+     */
     private class ArrayListIterator implements java.util.Iterator<AnyType> {
         private int current = 0;
 
